@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Document</title>
+
+    <!-- Bootsrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Google Fonts CDN  -->
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@500;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CDN  -->
+    <script src="https://kit.fontawesome.com/6acb0d9fa3.js" crossorigin="anonymous"></script>
+
+    <!-- Local Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-bg">
+        <a class="navbar-brand" href="index.html">streamLine</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Trending</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+
+            </ul>
+            <div class="icon rounded">
+                <a href="https://github.com/Itsacoup"><i class="fab fa-git-alt px-2"
+                        style="color: #F05133; font-size: 3em;"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- jumbotron with search and video back drop -->
+
+    <div class="jumbotron jumbotron-fluid">
+
+        <video autoplay muted loop poster="">
+            <source src="assets/jumboBG.mp4" data-src="" type="video/mp4">
+            <source src="" data-src="" type="video/mov">
+            <source src="" data-src="" type="video/ogg">
+        </video>
+        <div class="container text-white">
+            <h1 class="display-4">Welcome to streamLine</h1>
+            <p class="lead">Search for a streamer you like or a game on a platform of your choice.</p>
+            <hr class="my-4">
+            <div class="row justify-content-around">
+                <div class="col-lg-4">
+                    <h6>Search Streamer</h6>
+                    <input id="streamer"><button id="streamerGo" class="btn btn-bg m-1">go</button>
+                </div>
+                <div class="col-lg-4">
+                    <h6>Search Game</h6>
+                    <input id="game"><button id="gameGo" class="btn btn-bg m-1">go</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="container-fluid d-flex">
+        <div id="homeContent" class="album-sec">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="header text-center">
+                        <!-- Title -->
+                        <h2> Trending Games </h2>
+                        <!-- Discription of game/ streamer-->
+                        <p> Click the image below to load another game! </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5 d-flex justify-content-between">
+                <div id="carouselExampleControls" class="carousel slide" data-interval="false">
+
+                    <div class="carousel-inner ml-5">
+
+                        <div class="carousel-item active">
+                            <div class="col-md-3">
+                                <div class="single-album">
+                                    <div class="album-img">
+                                        <!-- Input GAME/STREAMER Image here-->
+                                        <img id="carImg1" src="" alt="Second slide">
+                                    </div>
+                                    <div class="album-content">
+                                        <div class="album-info">
+                                            <!-- INPUT GAME/ STREAMER NAME-->
+                                            <h3 id="carTitle1"></h3>
+                                            <!-- GAME/STREMAER STYLE-->
+                                            <P id="carGenre1"></p>
+                                        </div>
+                                        <!-- INPUT GAME/STREAMER INFORMATION -->
+                                        <p id="carDescript1" class="album-text p-4"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="carousel-item">
+                            <div class="col-md-3">
+                                <div class="single-album">
+                                    <div class="album-img">
+                                        <!-- Input GAME/STREAMER Image here-->
+                                        <img id="carImg2" src="" alt="Second slide">
+                                    </div>
+                                    <div class="album-content">
+                                        <div class="album-info">
+                                            <!-- INPUT GAME/ STREAMER NAME-->
+                                            <h3 id="carTitle2"></h3>
+                                            <!-- GAME/STREMAER STYLE-->
+                                            <P id="carGenre2"></p>
+                                        </div>
+                                        <!-- INPUT GAME/STREAMER INFORMATION -->
+                                        <p id="carDescript2" class="album-text p-4"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+                    </div>
+
+                    <a class="carousel-control-prev carSlide" href="#carouselExampleControls" role="button"
+                        data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next carSlide" href="#carouselExampleControls" role="button"
+                        data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+                <div id="mainContent" class="ml-auto my-5">
+                    <div id="vidOnLoad" style="text-align:center">
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <!--Carousel Wrapper-->
+        <div id="results" class="collapse">
+            <div id="gameRow" class="row justify-content-between d-flex align-items-center">
+                <div class="col-lg-3 pr-0 text-center" id="gameData1">
+                    <div class="card my-4">
+                        <div class="card-body">
+                            <h3 id="currentGame" class="card-title"></h3>
+                        </div>
+                    </div>
+                    <div class="card my-4">
+                        <div class="card-body">
+                            <img class="card-title img-fluid" id="gamePoster">
+                            <p class="card-text"></p>
+
+                        </div>
+                    </div>
+                    <div class="card my-4">
+                        <div class="card-body">
+                            <h4><a id="currentWebsite" href="">Official Page</a></h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 p-0 text-center">
+                    <div id="vidResult" style="text-align:center">
+                        <iframe width="800" height="450" src="https://www.youtube.com/embed/KmMFCvVty_U" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-lg-3 pl-0" id="gameData2">
+                    <div class="card my-5">
+                        <div class="card-body">
+                            <h5 class="card-title">Description and Rating:</h5>
+                            <p id="gameDescription" class="card-text"></p>
+                            <h3 id="rating"></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+    <!-- cards with trending -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="card-deck">
+                <div class="card m-3 gamecard" data-game="Call of Duty Warzone">
+                    <img src="https://images10.newegg.com/BizIntell/item/74/117/74-117-398/Call-of-Duty-Modern-Warfare-Xbox.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Call of Duty:Modern Warfare</h5>
+                        <p class="card-text">FPS, Team Tactics, Battle Royale</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-bg">Check It Out</button>
+                    </div>
+                </div>
+                <div class="card m-3 gamecard" data-game="Escape From Tarkov">
+                    <img src="https://esportsobserver.com/wp-content/uploads/2020/06/Twitch-Top10s.jpg" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Escape From Tarkov</h5>
+                        <p class="card-text">Realism RPG Survival FPS</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-bg">Check It Out</button>
+                    </div>
+                </div>
+                <div class="card m-3 gamecard" data-game="Among Us">
+                    <img src="https://steamcdn-a.akamaihd.net/steam/apps/945360/header.jpg?t=1581973789" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Among Us</h5>
+                        <p class="card-text">Betray Your Friends and Survive</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-bg">Check It Out</button>
+                    </div>
+                </div>
+                <div class="card m-3 gamecard" data-game="Fall Guys">
+                    <img src="https://steamcdn-a.akamaihd.net/steam/apps/1097150/header.jpg?t=1598911632" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Fall Guys</h5>
+                        <p class="card-text">Jelly Bean Racing</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-bg">Check It Out</button>
+                    </div>
+                </div>
+                <div class="card m-3 gamecard" data-game="Fortnite">
+                    <img src="https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_download_software_1/H2x1_NSwitchDS_Fortnite_Chapter2Season4_image1280w.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Fortnite</h5>
+                        <p class="card-text">TPS Ultimate Battle Royale Experience</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-bg">Check It Out</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card-deck">
+                <div class="card m-3 gamecard" data-game="League of Legends">
+                    <img src="https://cdn1.dotesports.com/wp-content/uploads/2019/09/12195522/league-of-legends.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">League of Legends</h5>
+                        <p class="card-text">MMO Team Tactics</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-bg">Check It Out</button>
+                    </div>
+                </div>
+                <div class="card m-3 gamecard" data-game="Grand Theft Auto V">
+                    <img src="https://steamcdn-a.akamaihd.net/steam/apps/271590/capsule_616x353.jpg?t=1592866696"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Grand Theft Auto V</h5>
+                        <p class="card-text">Do whatever you want</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-bg">Check It Out</button>
+                    </div>
+                </div>
+                <div class="card m-3 gamecard" data-game="Valorant">
+                    <img src="https://image-cdn.essentiallysports.com/wp-content/uploads/20200601234858/valorant-personajes-1.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Valorant</h5>
+                        <p class="card-text">TPS Team Tactics</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-bg">Check It Out</button>
+                    </div>
+                </div>
+                <div class="card m-3 gamecard" data-game="World of Warcraft">
+                    <img src="https://i.gadgets360cdn.com/large/world-of-warcraft_1515269153610.jpg" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">World of Warcraft</h5>
+                        <p class="card-text">MMO</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-bg">Check It Out</button>
+                    </div>
+                </div>
+                <div class="card m-3 gamecard" data-game="Minecraft">
+                    <img src="https://cdn.vox-cdn.com/thumbor/2D0fSxmi24Zw7aaB3M_TViUavrc=/1400x788/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/15957232/0fe20042_0bb8_4781_82f4_7130f928b021.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Minecraft</h5>
+                        <p class="card-text">Architect Simulator</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-bg">Check It Out</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <footer id="sticky-footer" class="py-4 card-footer footer-bg text-white-50">
+        <div class="container text-center">
+            <small> Designed by Andrew Gunter, Sean Grant, Steven London & Matt Baber</small>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
